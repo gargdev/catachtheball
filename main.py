@@ -81,7 +81,8 @@ def move_ball():
 
 # Reset ball to top with random position
 def reset_ball():
-    canvas.coords(ball, random.randint(20, WIDTH - 20), 0, random.randint(20, WIDTH - 20) + 20, 20)
+    x_position = random.randint(20, WIDTH - 20)
+    canvas.coords(ball, x_position, 0, x_position + 20, 20)
 
 # Bind paddle movement to arrow keys
 root.bind("<Left>", move_paddle)
